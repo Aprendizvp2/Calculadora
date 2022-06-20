@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="manifest" href="./favicon.ico" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Calculadora</title>
+    <link type="text/css" href="./Calculadora.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="root">
+      <div class="calculator">
+        <div class="screen">
+          <input
+            id="setOne"
+            type="text"
+            placeholder="Ingresa el primer numero"
+          />
+          <input
+            id="setTwo"
+            type="text"
+            placeholder="Ingresa el segundo numero"
+          />
+        </div>
+        <div class="keys">
+            <button class="button" id="numberOne" type="button" value="1">
+                1
+            </button>
+            <button class="button" id="numberOne" type="button" value="2">
+                2
+            </button>
+            <button class="button" id="numberOne" type="button" value="3">
+                3
+            </button>
+            <input class="operator" id="button-operator-adittion" type="submit" value="+" />
+        </div>
+        <div class="keys">
+            <button class="button" id="numberOne" type="button" value="4">
+                4
+            </button>
+            <button class="button" id="numberOne" type="button" value="5">
+                5
+            </button>
+            <button class="button" id="numberOne" type="button" value="6">
+                6
+            </button>
+            <input class="operator" id="button-operator-substract" type="submit" value="-" />
+        </div>
+        <div class="keys">
+            <button class="button" id="numberOne" type="button" value="7">
+                7
+            </button>
+            <button class="button" id="numberOne" type="button" value="8">
+                8
+            </button>
+            <button class="button" id="numberOne" type="button" value="9">
+                9
+            </button>
+            <input class="operator" id="button-operator-multiplication" type="submit" value="*" />
+        </div>
+        <div class="keys">
+            <input class="operator" id="button-operator-log" type="submit" value="ln" />
+            <input class="operator" id="button-operator-module" type="submit" value="%" />
+            <input class="operator" id="button-operator-division" type="submit" value="/" />
+            <input class="operator-result" id="button-result" type="submit" value="=" />
+        </div>
+      </div>
+      <h4 id="parrafo-result">
+        <!..Resultado de la operacion..>
+      </h4>
+    </div>
+    <h4 id="parrafo-result">
+      <!..Resultado de la operacion..>
+    </h4>
+    <script src="./Calculadora.js"></script>
+  </body>
+</html>
