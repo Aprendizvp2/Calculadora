@@ -1,6 +1,6 @@
-const numerouno = 2
-const numerodos = 20
-let resultado = 0
+const sumandouno = 2
+const sumandodos = 20
+let total = 0
 
-resultado = numerouno + numerodos
-console.log(resultado)
+total = sumandouno + numerodos
+console.log(total)

@@ -1,6 +1,6 @@
-const numerouno = 10
-const numerodos = 2
-let resultado = 0
+const dividendo = 10
+const divisor = 2
+let cociente = 0
 
-resultado = numerouno / numerodos
-console.log(resultado)
+cociente = dividendo / divisor
+console.log(cociente)
