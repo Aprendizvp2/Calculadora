@@ -4,6 +4,7 @@ const buttonOperatorAdittion = document.getElementById("button-operator-adittion
 const buttonOperatorSubstract = document.getElementById("button-operator-substract")
 const buttonOperatorMultiplication = document.getElementById("button-operator-multiplication")
 const buttonOperatorDivision = document.getElementById("button-operator-division")
+const buttonOperatorModule = document.getElementById("button-operator-module")
 const buttonResult = document.getElementById("button-result")
 
 const parrafoResult = document.getElementById("parrafo-result")
@@ -19,6 +20,7 @@ buttonOperatorAdittion.addEventListener("click", operatorAdittionSelected)
 buttonOperatorSubstract.addEventListener("click", operatorSubstractSelected)
 buttonOperatorMultiplication.addEventListener("click", operatorMultiplicationSelected)
 buttonOperatorDivision.addEventListener("click", operatorDivisionSelected)
+buttonOperatorModule.addEventListener("click", operatorModuleSelected)
 buttonResult.addEventListener("click", operation)
 
 function setOneSelected() {
@@ -45,6 +47,10 @@ function operatorDivisionSelected() {
     myOperation.operator = buttonOperatorDivision.value
 }
 
+function operatorModuleSelected() {
+  myOperation.operator = buttonOperatorModule.value
+}
+
 function operation() {
   setOneSelected();
   setTwoSelected();
@@ -61,6 +67,9 @@ function operation() {
       multiplication(myOperation.setOne, myOperation.setTwo)
       break;
     case "/":
+      division(myOperation.setOne, myOperation.setTwo)
+      break;
+    case "%":
       division(myOperation.setOne, myOperation.setTwo)
       break;
   }
@@ -83,5 +92,10 @@ function multiplication(setOne, setTwo) {
 
 function division(setOne, setTwo) {
   const result = parseInt(setOne) / parseInt(setTwo)
+  parrafoResult.innerHTML = result
+}
+
+function division(setOne, setTwo) {
+  const result = parseInt(setOne) % parseInt(setTwo)
   parrafoResult.innerHTML = result
 }
