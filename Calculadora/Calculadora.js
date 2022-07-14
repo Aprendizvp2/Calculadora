@@ -1,87 +1,84 @@
-const buttonSetOne = document.getElementById("setOne")
-const buttonSetTwo = document.getElementById("setTwo")
-const buttonOperatorAdittion = document.getElementById("button-operator-adittion")
-const buttonOperatorSubstract = document.getElementById("button-operator-substract")
-const buttonOperatorMultiplication = document.getElementById("button-operator-multiplication")
-const buttonOperatorDivision = document.getElementById("button-operator-division")
-const buttonResult = document.getElementById("button-result")
+let operadorA = '';
+let operadorB = '';
+let operador = '';
+let digito = '';
+const resultado = document.getElementById('resultado');
+const reset = document.getElementById('reset');
+const suma = document.getElementById('suma');
+const resta = document.getElementById('resta');
+const multiplicacion = document.getElementById('multiplicacion');
+const division = document.getElementById('division');
 
-const parrafoResult = document.getElementById("parrafo-result")
+const igual = document.getElementById('igual');
 
-const myOperation = {
-  setOne: "",
-  setTwo: "",
-  operator: "",
-  result: "",
-};
+const buttonUno = document.getElementById('uno'); //const //document - OBJETO
+const buttonDos = document.getElementById('dos');
+const butonTres = document.getElementById('tres');
+const buttonCuatro = document.getElementById('cuatro');
+const buttonCinco = document.getElementById('cinco');
+const seis = document.getElementById('seis');
+const siete = document.getElementById('siete');
+const ocho = document.getElementById('ocho');
+const nueve = document.getElementById('nueve');
+const cero = document.getElementById('cero');
 
-buttonOperatorAdittion.addEventListener("click", operatorAdittionSelected)
-buttonOperatorSubstract.addEventListener("click", operatorSubstractSelected)
-buttonOperatorMultiplication.addEventListener("click", operatorMultiplicationSelected)
-buttonOperatorDivision.addEventListener("click", operatorDivisionSelected)
-buttonResult.addEventListener("click", operation)
+buttonUno.addEventListener('click', function () {
+  if (operador == '') {
+    if (operadorA == '') {
+      resultado.innerHTML = '1';
+    } else {
+      resultado.innerHTML = resultado.innerHTML + '1';
+    }
 
-function setOneSelected() {
-  myOperation.setOne = buttonSetOne.value
-}
+    operadorA = resultado.innerText;
+    console.log(operadorA);
+  } else {
+    if (operadorB == '') {
+      resultado.innerHTML = '1';
+    } else {
+      resultado.innerHTML = resultado.innerHTML + '1';
+    }
+    operadorB = resultado.innerText;
+    console.log(operadorB);
+  }
+});
 
-function setTwoSelected() {
-  myOperation.setTwo = buttonSetTwo.value
-}
+let newDos = ""
+buttonDos.addEventListener('click', function () {
+ 
+  if (operador == '') {
+    if (operadorA == '') {
+      resultado.innerHTML = '2';
+    } else {
+      resultado.innerHTML = resultado.innerHTML + '2';
+    }
 
-function operatorAdittionSelected() {
-  myOperation.operator = buttonOperatorAdittion.value
-}
+    operadorA = resultado.innerText;
+    console.log(operadorA);
+  } else {
+    
+    resultado.innerHTML = resultado.innerHTML + '2';
+    
+    console.log(newDos);
+    console.log(newDos = newDos + "2");
+    operadorB = newDos
+  }
+});
 
-function operatorSubstractSelected() {
-    myOperation.operator = buttonOperatorSubstract.value
-}
+suma.addEventListener('click', function () {
+  if (operadorA == '') {
+    operadorA = '0';
+  }
+  operador = '+';
+  resultado.innerHTML = resultado.innerHTML + '+';
+});
 
-function operatorMultiplicationSelected() {
-    myOperation.operator = buttonOperatorMultiplication.value
-}
-
-function operatorDivisionSelected() {
-    myOperation.operator = buttonOperatorDivision.value
-}
-
-function operation() {
-  setOneSelected();
-  setTwoSelected();
-  const operator = myOperation.operator
-
-  switch (operator) {
-    case "+":
-      adittion(myOperation.setOne, myOperation.setTwo)
+igual.addEventListener('click', function () {
+  switch (operacion) {
+    case '+':
+      sumaOperator();
       break;
-    case "-":
-      substract(myOperation.setOne, myOperation.setTwo)
-      break;
-    case "*":
-      multiplication(myOperation.setOne, myOperation.setTwo)
-      break;
-    case "/":
-      division(myOperation.setOne, myOperation.setTwo)
+    default:
       break;
   }
-}
-
-function adittion(setOne, setTwo) {
-  const result = parseInt(setOne) + parseInt(setTwo)
-  parrafoResult.innerHTML = result
-}
-
-function substract(setOne, setTwo) {
-  const result = parseInt(setOne) - parseInt(setTwo)
-  parrafoResult.innerHTML = result
-}
-
-function multiplication(setOne, setTwo) {
-  const result = parseInt(setOne) * parseInt(setTwo)
-  parrafoResult.innerHTML = result
-}
-
-function division(setOne, setTwo) {
-  const result = parseInt(setOne) / parseInt(setTwo)
-  parrafoResult.innerHTML = result
-}
+});

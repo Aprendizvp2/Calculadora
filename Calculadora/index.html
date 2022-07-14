@@ -11,68 +11,93 @@
   <body>
     <div class="root">
       <div class="calculator">
-        <div class="screen">
+          <div class="screen"><span class="result" id="resultado"></span></div>
+        <div class="keys">
           <input
-            id="setOne"
-            type="text"
-            placeholder="Ingresa el primer numero"
+            class="on-off"
+            id="button-off"
+            type="submit"
+            value="AC"
           />
           <input
-            id="setTwo"
-            type="text"
-            placeholder="Ingresa el segundo numero"
+            class="clear"
+            onclick="del()"
+            type="submit"
+            value="C"
+          />
+          <input
+            class="operator"
+            id="button-operator-module"
+            type="submit"
+            value="%"
+          />
+          <input
+            class="operator"
+            onclick="add('/')"
+            type="submit"
+            value="/"
           />
         </div>
         <div class="keys">
-            <button class="button" id="numberOne" type="button" value="1">
-                1
-            </button>
-            <button class="button" id="numberOne" type="button" value="2">
-                2
-            </button>
-            <button class="button" id="numberOne" type="button" value="3">
-                3
-            </button>
-            <input class="operator" id="button-operator-adittion" type="submit" value="+" />
+          <button class="button" id="siete" type="button" value="7">7</button>
+          <button class="button" id="ocho" type="button" value="8">8</button>
+          <button class="button" id="nueve" type="button" value="9">9</button>
+          <input
+            class="operator"
+            onclick="add('*')"
+            type="submit"
+            value="*"
+          />
         </div>
         <div class="keys">
-            <button class="button" id="numberOne" type="button" value="4">
-                4
-            </button>
-            <button class="button" id="numberOne" type="button" value="5">
-                5
-            </button>
-            <button class="button" id="numberOne" type="button" value="6">
-                6
-            </button>
-            <input class="operator" id="button-operator-substract" type="submit" value="-" />
+          <button class="button" id="cuatro" type="button" value="4">4</button>
+          <button class="button" id="cinco" type="button" value="5">5</button>
+          <button class="button" id="seis" type="button" value="6">6</button>
+          <input
+            class="operator"
+            onclick="add('-')"
+            type="submit"
+            value="-"
+          />
         </div>
         <div class="keys">
-            <button class="button" id="numberOne" type="button" value="7">
-                7
-            </button>
-            <button class="button" id="numberOne" type="button" value="8">
-                8
-            </button>
-            <button class="button" id="numberOne" type="button" value="9">
-                9
-            </button>
-            <input class="operator" id="button-operator-multiplication" type="submit" value="*" />
+          <button class="button" id="uno" type="button" value="1">1</button>
+          <button class="button" id="dos" type="button" value="2">2</button>
+          <button class="button" id="tres" type="button" value="3">3</button>
+          <button
+            class="operator"
+            id="suma"
+            type="button"
+            value="+"
+          >+</button>
         </div>
         <div class="keys">
-            <input class="operator" id="button-operator-log" type="submit" value="ln" />
-            <input class="operator" id="button-operator-module" type="submit" value="%" />
-            <input class="operator" id="button-operator-division" type="submit" value="/" />
-            <input class="operator-result" id="button-result" type="submit" value="=" />
+          <button class="button" id="cero" type="button" value="0">0</button>
+          <input
+            class="operator"
+            onclick="add('.')"
+            type="button"
+            value="."
+          />
+          <input
+            class="operator"
+            id="root"
+            type="button"
+            value="√"
+          />
+          <input
+            class="operator"
+            id="igual"
+            type="submit"
+            value="="
+          />
         </div>
       </div>
       <h4 id="parrafo-result">
         <!..Resultado de la operacion..>
       </h4>
     </div>
-    <h4 id="parrafo-result">
-      <!..Resultado de la operacion..>
-    </h4>
-    <script src="./Calculadora.js"></script>
+    <script src="./Suma.js"></script>
+    <script src="./Calculadora/Calculadora.js"></script>
   </body>
 </html>
