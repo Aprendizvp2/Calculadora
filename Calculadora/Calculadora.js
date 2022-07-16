@@ -1,3 +1,4 @@
+
 let operadorA = '';
 let operadorB = '';
 let operador = '';
@@ -24,257 +25,292 @@ const buttonnueve = document.getElementById('nueve');
 const buttoncero = document.getElementById('cero');
 
 punto.addEventListener('click', function () {
-  if (operador == "") {
-    if (operadorA == '') {
-      resultado.innerHTML = '0.';
+    if (operador == "") {
+        if (operadorA == '') {
+            resultado.innerHTML = '0.';
+        } else {
+            if (operadorA != '') {
+                resultado.innerHTML = resultado.innerHTML + '.';
+            }
+        }
+        operadorA = resultado.innerText;
     } else {
-      if (operadorA != '') {
-        resultado.innerHTML = resultado.innerHTML + '.';
-      }
+        if (operadorB == '') {
+            resultado.innerHTML = '0.';
+        } else {
+            if (operadorB != '') {
+                resultado.innerHTML = resultado.innerHTML + '.';
+            }
+            operadorB = resultado.innerText;
+        }
     }
-    operadorA = resultado.innerText;
-  } else {
-    if (operadorB == '') {
-      resultado.innerHTML = '0.';
-    } else {
-      if (operadorB != '') {
-        resultado.innerHTML = resultado.innerHTML + '.';
-      }
-      operadorB = resultado.innerText;
-    }
-  }
 }
 );
 buttonUno.addEventListener('click', function () {
-  if (operador == '') {
-    if (operadorA == '') {
-      resultado.innerHTML = '1';
-    } else {
-      resultado.innerHTML = resultado.innerHTML + '1';
-    }
+    if (operador == '') {
+        if (operadorA == '') {
+            resultado.innerHTML = '1';
+        } else {
+            resultado.innerHTML = resultado.innerHTML + '1';
+        }
 
-    operadorA = resultado.innerText;
-    console.log(operadorA);
-  } else {
-    if (operadorB == '') {
-      resultado.innerHTML = '1';
+        operadorA = resultado.innerText;
+        console.log(operadorA);
     } else {
-      resultado.innerHTML = resultado.innerHTML + '1';
+        if (operadorB == '') {
+            resultado.innerHTML = '1';
+        } else {
+            resultado.innerHTML = resultado.innerHTML + '1';
+        }
+        operadorB = resultado.innerText;
+        console.log(operadorB);
     }
-    operadorB = resultado.innerText;
-    console.log(operadorB);
-  }
 });
 buttonDos.addEventListener('click', function () {
-  if (operador == '') {
-    if (operadorA == '') {
-      resultado.innerHTML = '2';
-    } else {
-      resultado.innerHTML = resultado.innerHTML + '2';
-    }
+    if (operador == '') {
+        if (operadorA == '') {
+            resultado.innerHTML = '2';
+        } else {
+            resultado.innerHTML = resultado.innerHTML + '2';
+        }
 
-    operadorA = resultado.innerText;
-    console.log(operadorA);
-  } else {
-    if (operadorB == '') {
-      resultado.innerHTML = '2';
+        operadorA = resultado.innerText;
+        console.log(operadorA);
     } else {
-      resultado.innerHTML = resultado.innerHTML + '2';
+        if (operadorB == '') {
+            resultado.innerHTML = '2';
+        } else {
+            resultado.innerHTML = resultado.innerHTML + '2';
+        }
+        operadorB = resultado.innerText;
+        console.log(operadorB);
     }
-    operadorB = resultado.innerText;
-    console.log(operadorB);
-  }
 });
 
 buttonTres.addEventListener('click', function () {
-  if (operador == '') {
-    if (operadorA == '') {
-      resultado.innerHTML = '3';
-    } else {
-      resultado.innerHTML = resultado.innerHTML + '3';
-    }
+    if (operador == '') {
+        if (operadorA == '') {
+            resultado.innerHTML = '3';
+        } else {
+            resultado.innerHTML = resultado.innerHTML + '3';
+        }
 
-    operadorA = resultado.innerText;
-    console.log(operadorA);
-  } else {
-    if (operadorB == '') {
-      resultado.innerHTML = '3';
+        operadorA = resultado.innerText;
+        console.log(operadorA);
     } else {
-      resultado.innerHTML = resultado.innerHTML + '3';
+        if (operadorB == '') {
+            resultado.innerHTML = '3';
+        } else {
+            resultado.innerHTML = resultado.innerHTML + '3';
+        }
+        operadorB = resultado.innerText;
+        console.log(operadorB);
     }
-    operadorB = resultado.innerText;
-    console.log(operadorB);
-  }
 });
 
 buttonCuatro.addEventListener('click', function () {
-  if (operador == '') {
-    if (operadorA == '') {
-      resultado.innerHTML = '4';
-    } else {
-      resultado.innerHTML = resultado.innerHTML + '4';
-    }
+    if (operador == '') {
+        if (operadorA == '') {
+            resultado.innerHTML = '4';
+        } else {
+            resultado.innerHTML = resultado.innerHTML + '4';
+        }
 
-    operadorA = resultado.innerText;
-    console.log(operadorA);
-  } else {
-    if (operadorB == '') {
-      resultado.innerHTML = '4';
+        operadorA = resultado.innerText;
+        console.log(operadorA);
     } else {
-      resultado.innerHTML = resultado.innerHTML + '4';
+        if (operadorB == '') {
+            resultado.innerHTML = '4';
+        } else {
+            resultado.innerHTML = resultado.innerHTML + '4';
+        }
+        operadorB = resultado.innerText;
+        console.log(operadorB);
     }
-    operadorB = resultado.innerText;
-    console.log(operadorB);
-  }
 });
 
 buttonCinco.addEventListener('click', function () {
-  if (operador == '') {
-    if (operadorA == '') {
-      resultado.innerHTML = '5';
-    } else {
-      resultado.innerHTML = resultado.innerHTML + '5';
-    }
+    if (operador == '') {
+        if (operadorA == '') {
+            resultado.innerHTML = '5';
+        } else {
+            resultado.innerHTML = resultado.innerHTML + '5';
+        }
 
-    operadorA = resultado.innerText;
-    console.log(operadorA);
-  } else {
-    if (operadorB == '') {
-      resultado.innerHTML = '5';
+        operadorA = resultado.innerText;
+        console.log(operadorA);
     } else {
-      resultado.innerHTML = resultado.innerHTML + '5';
+        if (operadorB == '') {
+            resultado.innerHTML = '5';
+        } else {
+            resultado.innerHTML = resultado.innerHTML + '5';
+        }
+        operadorB = resultado.innerText;
+        console.log(operadorB);
     }
-    operadorB = resultado.innerText;
-    console.log(operadorB);
-  }
 });
 
 buttonseis.addEventListener('click', function () {
-  if (operador == '') {
-    if (operadorA == '') {
-      resultado.innerHTML = '6';
-    } else {
-      resultado.innerHTML = resultado.innerHTML + '6';
-    }
+    if (operador == '') {
+        if (operadorA == '') {
+            resultado.innerHTML = '6';
+        } else {
+            resultado.innerHTML = resultado.innerHTML + '6';
+        }
 
-    operadorA = resultado.innerText;
-    console.log(operadorA);
-  } else {
-    if (operadorB == '') {
-      resultado.innerHTML = '6';
+        operadorA = resultado.innerText;
+        console.log(operadorA);
     } else {
-      resultado.innerHTML = resultado.innerHTML + '6';
+        if (operadorB == '') {
+            resultado.innerHTML = '6';
+        } else {
+            resultado.innerHTML = resultado.innerHTML + '6';
+        }
+        operadorB = resultado.innerText;
+        console.log(operadorB);
     }
-    operadorB = resultado.innerText;
-    console.log(operadorB);
-  }
 });
 
 buttonsiete.addEventListener('click', function () {
-  if (operador == '') {
-    if (operadorA == '') {
-      resultado.innerHTML = '7';
-    } else {
-      resultado.innerHTML = resultado.innerHTML + '7';
-    }
+    if (operador == '') {
+        if (operadorA == '') {
+            resultado.innerHTML = '7';
+        } else {
+            resultado.innerHTML = resultado.innerHTML + '7';
+        }
 
-    operadorA = resultado.innerText;
-    console.log(operadorA);
-  } else {
-    if (operadorB == '') {
-      resultado.innerHTML = '7';
+        operadorA = resultado.innerText;
+        console.log(operadorA);
     } else {
-      resultado.innerHTML = resultado.innerHTML + '7';
+        if (operadorB == '') {
+            resultado.innerHTML = '7';
+        } else {
+            resultado.innerHTML = resultado.innerHTML + '7';
+        }
+        operadorB = resultado.innerText;
+        console.log(operadorB);
     }
-    operadorB = resultado.innerText;
-    console.log(operadorB);
-  }
 });
 
 buttonocho.addEventListener('click', function () {
-  if (operador == '') {
-    if (operadorA == '') {
-      resultado.innerHTML = '8';
-    } else {
-      resultado.innerHTML = resultado.innerHTML + '8';
-    }
+    if (operador == '') {
+        if (operadorA == '') {
+            resultado.innerHTML = '8';
+        } else {
+            resultado.innerHTML = resultado.innerHTML + '8';
+        }
 
-    operadorA = resultado.innerText;
-    console.log(operadorA);
-  } else {
-    if (operadorB == '') {
-      resultado.innerHTML = '8';
+        operadorA = resultado.innerText;
+        console.log(operadorA);
     } else {
-      resultado.innerHTML = resultado.innerHTML + '8';
+        if (operadorB == '') {
+            resultado.innerHTML = '8';
+        } else {
+            resultado.innerHTML = resultado.innerHTML + '8';
+        }
+        operadorB = resultado.innerText;
+        console.log(operadorB);
     }
-    operadorB = resultado.innerText;
-    console.log(operadorB);
-  }
 });
 
 buttonnueve.addEventListener('click', function () {
-  if (operador == '') {
-    if (operadorA == '') {
-      resultado.innerHTML = '9';
-    } else {
-      resultado.innerHTML = resultado.innerHTML + '9';
-    }
+    if (operador == '') {
+        if (operadorA == '') {
+            resultado.innerHTML = '9';
+        } else {
+            resultado.innerHTML = resultado.innerHTML + '9';
+        }
 
-    operadorA = resultado.innerText;
-    console.log(operadorA);
-  } else {
-    if (operadorB == '') {
-      resultado.innerHTML = '9';
+        operadorA = resultado.innerText;
+        console.log(operadorA);
     } else {
-      resultado.innerHTML = resultado.innerHTML + '9';
+        if (operadorB == '') {
+            resultado.innerHTML = '9';
+        } else {
+            resultado.innerHTML = resultado.innerHTML + '9';
+        }
+        operadorB = resultado.innerText;
+        console.log(operadorB);
     }
-    operadorB = resultado.innerText;
-    console.log(operadorB);
-  }
 });
 
 buttoncero.addEventListener('click', function () {
-  if (operador == '') {
-    if (operadorA == '') {
-      resultado.innerHTML = '0';
-    } else {
-      resultado.innerHTML = resultado.innerHTML + '0';
-    }
+    if (operador == '') {
+        if (operadorA == '') {
+            resultado.innerHTML = '0';
+        } else {
+            resultado.innerHTML = resultado.innerHTML + '0';
+        }
 
-    operadorA = resultado.innerText;
-    console.log(operadorA);
-  } else {
-    if (operadorB == '') {
-      resultado.innerHTML = '0';
+        operadorA = resultado.innerText;
+        console.log(operadorA);
     } else {
-      resultado.innerHTML = resultado.innerHTML + '0';
+        if (operadorB == '') {
+            resultado.innerHTML = '0';
+        } else {
+            resultado.innerHTML = resultado.innerHTML + '0';
+        }
+        operadorB = resultado.innerText;
+        console.log(operadorB);
     }
-    operadorB = resultado.innerText;
-    console.log(operadorB);
-  }
 });
 
 
 suma.addEventListener('click', function () {
-  if (operadorA == '') {
-    operadorA = '0';
-  }
-  operador = '+';
-  resultado.innerHTML = resultado.innerHTML + '+';
+    if (operadorA == '') {
+        operadorA = '0';
+    }
+    operador = '+';
+    resultado.innerHTML = resultado.innerHTML + '+';
 });
 
+resta.addEventListener('click', function () {
+    if (operadorA == '') {
+        operadorA = '0';
+    }
+    operador = '-'
+    resultado.innerHTML = resultado.innerHTML + '-';
+});
+multiplicacion.addEventListener('click', function () {
+    if (operadorA == '') {
+        operadorA = '0';
+    }
+    operador = '*'
+    resultado.innerHTML = resultado.innerHTML + '*';
+});
+division.addEventListener('click', function () {
+    if (operadorA == '') {
+        operadorA = '0';
+    }
+    operador = '/'
+    resultado.innerHTML = resultado.innerHTML + '/'
+});
+
+
 clear.addEventListener('click', function () {
-  if (resultado != '') {
-    resultado.innerHTML = ''
-  }
+    if (resultado != '') {
+        operadorA = ''
+        operadorB = ''
+        operador = ''
+        resultado.innerHTML = ''
+    }
 });
 
 igual.addEventListener('click', function () {
-  switch (operador) {
-    case '+':
-      sumaOperator();
-      break;
-    default:
-      break;
-  }
+    switch (operador) {
+        case '+':
+            sumaOperator();
+            break;
+        case '-':
+            restaOperator();
+            break;
+        case '*':
+            multiplicacionOperator();
+            break;
+        case '/':
+            divisionoperacion();
+            break;
+        default:
+            break;
+    }
 });

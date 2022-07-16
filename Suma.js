@@ -1,3 +1,3 @@
 function sumaOperator() {
-  resultado.innerHTML = parseFloat(operadorA) + parseFloat(operadorB)
+resultado.innerHTML = parseFloat(operadorA) + parseFloat(operadorB)
 }
