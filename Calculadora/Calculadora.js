@@ -8,11 +8,10 @@ const suma = document.getElementById('suma');
 const resta = document.getElementById('resta');
 const multiplicacion = document.getElementById('multiplicacion');
 const division = document.getElementById('division');
+const modulo = document.getElementById('modulo');
 const punto = document.getElementById('punto');
-
 const igual = document.getElementById('igual');
-
-const buttonUno = document.getElementById('uno'); //const //document - OBJETO
+const buttonUno = document.getElementById('uno');
 const buttonDos = document.getElementById('dos');
 const buttonTres = document.getElementById('tres');
 const buttonCuatro = document.getElementById('cuatro');
@@ -22,6 +21,7 @@ const buttonsiete = document.getElementById('siete');
 const buttonocho = document.getElementById('ocho');
 const buttonnueve = document.getElementById('nueve');
 const buttoncero = document.getElementById('cero');
+const operacionCompleta = document.getElementById('operacionCompleta');
 
 punto.addEventListener('click', function () {
   if (operador == '') {
@@ -213,6 +213,7 @@ buttonocho.addEventListener('click', function () {
   }
 });
 
+let miNueve = '';
 buttonnueve.addEventListener('click', function () {
   if (operador == '') {
     if (operadorA == '') {
@@ -222,15 +223,10 @@ buttonnueve.addEventListener('click', function () {
     }
 
     operadorA = resultado.innerText;
-    console.log(operadorA);
   } else {
-    if (operadorB == '') {
-      resultado.innerHTML = '9';
-    } else {
-      resultado.innerHTML = resultado.innerHTML + '9';
-    }
-    operadorB = resultado.innerText;
-    console.log(operadorB);
+    miNueve = miNueve + '9';
+    operadorB = miNueve;
+    resultado.innerHTML = resultado.innerHTML + '9';
   }
 });
 
@@ -246,7 +242,7 @@ buttoncero.addEventListener('click', function () {
     console.log(operadorA);
   } else {
     if (operadorB == '') {
-      resultado.innerHTML = '0';
+      resultado.innerHTML = resultado.innerHTML + '0';
     } else {
       resultado.innerHTML = resultado.innerHTML + '0';
     }
@@ -265,11 +261,13 @@ suma.addEventListener('click', function () {
 
 resta.addEventListener('click', function () {
   if (operadorA == '') {
-    operadorA = '0';
+    operadorA = '-';
+  } else {
+    operador = '-';
   }
-  operador = '-';
   resultado.innerHTML = resultado.innerHTML + '-';
 });
+
 multiplicacion.addEventListener('click', function () {
   if (operadorA == '') {
     operadorA = '0';
@@ -277,6 +275,7 @@ multiplicacion.addEventListener('click', function () {
   operador = '*';
   resultado.innerHTML = resultado.innerHTML + '*';
 });
+
 division.addEventListener('click', function () {
   if (operadorA == '') {
     operadorA = '0';
@@ -285,12 +284,21 @@ division.addEventListener('click', function () {
   resultado.innerHTML = resultado.innerHTML + '/';
 });
 
+modulo.addEventListener('click', function () {
+  if (operadorA == '') {
+    operadorA = '0';
+  }
+  operador = '%';
+  resultado.innerHTML = resultado.innerHTML + '%';
+});
+
 clear.addEventListener('click', function () {
   if (resultado != '') {
     operadorA = '';
     operadorB = '';
     operador = '';
     resultado.innerHTML = '';
+    operacionCompleta = '';
   }
 });
 
@@ -298,6 +306,7 @@ igual.addEventListener('click', function () {
   switch (operador) {
     case '+':
       sumaOperator();
+      operacionCompleta.innerHTML = operadorA + operador + operadorB;
       break;
     case '-':
       restaOperator();
@@ -308,7 +317,12 @@ igual.addEventListener('click', function () {
     case '/':
       divisionOperator();
       break;
+    case '%':
+      moduloOperator();
+      break;
     default:
       break;
   }
 });
+
+console.log(resultado);
