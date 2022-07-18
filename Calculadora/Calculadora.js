@@ -28,6 +28,7 @@ punto.addEventListener('click', function () {
     if (operador == "") {
         if (operadorA == '') {
             resultado.innerHTML = '0.';
+            operadorA = resultado.innerText
         } else {
             if (operadorA != '') {
                 resultado.innerHTML = resultado.innerHTML + '.';
@@ -37,6 +38,7 @@ punto.addEventListener('click', function () {
     } else {
         if (operadorB == '') {
             resultado.innerHTML = '0.';
+            operadorB = resultado.innerText
         } else {
             if (operadorB != '') {
                 resultado.innerHTML = resultado.innerHTML + '.';
