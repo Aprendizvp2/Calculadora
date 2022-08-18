@@ -11,28 +11,17 @@
   <body>
     <div class="root">
       <div class="calculator">
-        <div class="screen">
-          <input
-            id="setOne"
-            type="text"
-            placeholder="Ingresa el primer numero"
-          />
-          <input
-            id="setTwo"
-            type="text"
-            placeholder="Ingresa el segundo numero"
-          />
-        </div>
+          <div class="screen"><span class="result" id="resultado"><h4 id="result"></h4></span></div>
         <div class="keys">
           <input
             class="on-off"
-            id="button-result"
+            id="button-off"
             type="submit"
             value="AC"
           />
           <input
             class="clear"
-            id="clear"
+            onclick="del()"
             type="submit"
             value="C"
           />
@@ -44,61 +33,61 @@
           />
           <input
             class="operator"
-            id="button-operator-division"
+            onclick="add('/')"
             type="submit"
             value="/"
           />
         </div>
         <div class="keys">
-          <button class="button" id="seven" type="button" value="7">7</button>
-          <button class="button" id="eight" type="button" value="8">8</button>
-          <button class="button" id="nine" type="button" value="9">9</button>
+          <button class="button" onclick="add('7')" type="button" value="7">7</button>
+          <button class="button" onclick="add('8')" type="button" value="8">8</button>
+          <button class="button" onclick="add('9')" type="button" value="9">9</button>
           <input
             class="operator"
-            id="button-operator-multiplication"
+            onclick="add('*')"
             type="submit"
             value="*"
           />
         </div>
         <div class="keys">
-          <button class="button" id="four" type="button" value="4">4</button>
-          <button class="button" id="five" type="button" value="5">5</button>
-          <button class="button" id="six" type="button" value="6">6</button>
+          <button class="button" onclick="add('4')" type="button" value="4">4</button>
+          <button class="button" onclick="add('5')" type="button" value="5">5</button>
+          <button class="button" onclick="add('6')" type="button" value="6">6</button>
           <input
             class="operator"
-            id="button-operator-substract"
+            onclick="add('-')"
             type="submit"
             value="-"
           />
         </div>
         <div class="keys">
-          <button class="button" id="one" type="button" value="1">1</button>
-          <button class="button" id="two" type="button" value="2">2</button>
-          <button class="button" id="three" type="button" value="3">3</button>
-          <input
+          <button class="button" id="uno" type="button" value="1">1</button>
+          <button class="button" id="dos" type="button" value="2">2</button>
+          <button class="button" onclick="add('3')" type="button" value="3">3</button>
+          <button
             class="operator"
-            id="button-operator-adittion"
-            type="submit"
+            id="suma"
+            type="button"
             value="+"
-          />
+          >+</button>
         </div>
         <div class="keys">
-          <button class="button" id="zero" type="button" value="0">0</button>
+          <button class="button" onclick="add('0')" type="button" value="0">0</button>
           <input
             class="operator"
-            id="point"
+            onclick="add('.')"
             type="button"
             value="."
           />
           <input
             class="operator"
-            id="button-result"
+            id="root"
             type="button"
             value="√"
           />
           <input
             class="operator"
-            id="button-result"
+            id="igual"
             type="submit"
             value="="
           />
@@ -108,9 +97,7 @@
         <!..Resultado de la operacion..>
       </h4>
     </div>
-    <h4 id="parrafo-result">
-      <!..Resultado de la operacion..>
-    </h4>
+    <script src="./Suma.js"></script>
     <script src="./Calculadora.js"></script>
   </body>
 </html>

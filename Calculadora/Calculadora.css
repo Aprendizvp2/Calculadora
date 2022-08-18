@@ -14,11 +14,17 @@
 
 .screen {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
+  align-items: flex-end;
   margin: 10px;
   width: auto;
   height: 80px;
   font-size: 25px;
+  background-color: white;
+}
+
+.result {
+  margin: 10px;
 }
 
 .keys {
